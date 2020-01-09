@@ -35,7 +35,7 @@ reposition();
 // }
 
 function burst(intensity) {
-
+	console.log('burst start')
 	var behavior = [
 		this.behavior.cohesion(),
 		this.behavior.move()
@@ -124,7 +124,7 @@ function burst(intensity) {
 		});
 
 	}
-
+	console.log('burst end')
 }
 
 // start particle simulation
@@ -165,7 +165,7 @@ simulate(
 			// nothing
 		},
 		action: function(x, y) {
-
+			console.log('action',input)
 			caret.textContent = input.value;
 
 			burst.call(this, 10);
@@ -513,6 +513,7 @@ function simulate(dimensions, options) {
 		}
 
 		function spray(amount, config) {
+			console.log()
 			var i = 0;
 			for (; i < amount; i++) {
 				add.apply(this, config());

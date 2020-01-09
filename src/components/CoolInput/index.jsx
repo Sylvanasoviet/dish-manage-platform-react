@@ -10,9 +10,9 @@ export default class CoolInput extends React.Component {
         var MAX_LIFE = 50;
         var canvas = document.querySelector('canvas');
         var input = document.getElementById('cool_input');
-        console.log('input',input)
+        // console.log('input',input)
         let _this = window
-        console.log(_this)
+        // console.log(_this)
         // console.log(input)
         var field = {}
         var caret = document.createElement('span');
@@ -32,7 +32,7 @@ export default class CoolInput extends React.Component {
         reposition();
 
         function burst(intensity) {
-
+            // console.log('burst start')
             var behavior = [
                 _this.behavior.cohesion(),
                 _this.behavior.move()
@@ -120,7 +120,7 @@ export default class CoolInput extends React.Component {
                 });
 
             }
-
+            // console.log('burst end')
         }
 
         // start particle simulation
@@ -152,7 +152,7 @@ export default class CoolInput extends React.Component {
                     // nohing
                 },
                 action: function(x, y) {
-                    console.log('action',input)
+                    // console.log('action',input)
                     caret.textContent = input.value;
                     burst.call(_this, 10);
                     input.classList.add('keyup');
@@ -182,7 +182,7 @@ export default class CoolInput extends React.Component {
             var stage = stage || function() {};
             // var canvas;
             var context;
-            console.log('simulate start')
+            // console.log('simulate start')
 
             if (!options) {
                 console.error('"options" object must be defined');
@@ -215,7 +215,7 @@ export default class CoolInput extends React.Component {
                 options.action = function() {};
             }
 
-            console.log('before setup',document.readyState)
+            // console.log('before setup',document.readyState)
             // if (document.readyState === 'interactive') {
             //     setup();
             // } else {
@@ -231,7 +231,7 @@ export default class CoolInput extends React.Component {
             // create canvas for drawing
             function setup() {
                 // create
-                console.log('setup')
+                // console.log('setup')
                 canvas = document.createElement('canvas');
                 document.body.appendChild(canvas);
                 // correct canvas size on window resize
@@ -304,6 +304,7 @@ export default class CoolInput extends React.Component {
                 function spray(amount, config) {
                     var i = 0;
                     for (; i < amount; i++) {
+                        // console.log(add)
                         add.apply(_this, config());
                     }
                 }
@@ -322,7 +323,7 @@ export default class CoolInput extends React.Component {
                     context.stroke();
                     context.closePath();
                 };
-                console.log('clear _this',_this)
+                // console.log('clear _this',_this)
                 _this.clear = clear;
                 _this.destroy = destroy;
                 _this.add = add;
@@ -601,7 +602,7 @@ export default class CoolInput extends React.Component {
                 tick();
                 // start listening to events
                 var self = _this;
-                console.log('bind key up',self)
+                // console.log('bind key up',self)
                 document.addEventListener('keyup', function(e) {
                     options.action.call(self, e.pageX, e.pageY);
                 });

@@ -5,7 +5,7 @@
  */
 import Vector from './vector'
 
-function Particle(id, group, position, velocity, size, life, behavior) {
+export default function Particle(id, group, position, velocity, size, life, behavior) {
     this._id = id || 'default';
     this._group = group || 'default';
 
