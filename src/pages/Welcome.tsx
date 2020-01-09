@@ -2,10 +2,7 @@ import React from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { FormattedMessage } from 'umi-plugin-react/locale';
 import { Card, Typography, Alert } from 'antd';
-<<<<<<< HEAD
 import CoolInput from '@/components/CoolInput/index';
-=======
->>>>>>> 63b6c5b699864eb112ef29bb2c55d28593013d6f
 
 import styles from './Welcome.less';
 
