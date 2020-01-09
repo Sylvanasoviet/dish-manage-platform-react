@@ -2,7 +2,10 @@ import React from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import { FormattedMessage } from 'umi-plugin-react/locale';
 import { Card, Typography, Alert } from 'antd';
+<<<<<<< HEAD
 import CoolInput from '@/components/CoolInput/index';
+=======
+>>>>>>> 63b6c5b699864eb112ef29bb2c55d28593013d6f
 
 import styles from './Welcome.less';
 
@@ -26,6 +29,7 @@ const CodePreview: React.FC<menuProps> = ({ menulist }) => {
 
 export default (): React.ReactNode => (
   <PageHeaderWrapper>
+<<<<<<< HEAD
     <Card style={{ background: '#333' }}>
       <Alert
         message="CoolIput展示"
@@ -39,6 +43,8 @@ export default (): React.ReactNode => (
       />
       <CoolInput />
     </Card>
+=======
+>>>>>>> 63b6c5b699864eb112ef29bb2c55d28593013d6f
     <Card>
       <Alert
         message="欢迎使用管理系统"
@@ -50,7 +56,10 @@ export default (): React.ReactNode => (
           marginBottom: 24,
         }}
       />
+<<<<<<< HEAD
       <br />
+=======
+>>>>>>> 63b6c5b699864eb112ef29bb2c55d28593013d6f
       <Typography.Text strong>
         <a>
           <FormattedMessage
